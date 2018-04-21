@@ -18,7 +18,7 @@ import net.dv8tion.jda.core.exceptions.RateLimitedException;
 public class EvtPrivateMessage extends BaseEvent<PrivateMessageReceivedEvent> {
 
     static {
-        BaseEvent.register("private message received", "<receive(d)?( seen)?|sent> [by %-string%]",
+        BaseEvent.register("<private|direct> message received", "<receive(d)?( seen)?|sent> [by %-string%]",
                 EvtPrivateMessage.class, PrivateMessageEvent.class, "(private message|direct message)")
                 .setName("Private Message")
                 .setDesc("Fired when a private message is received or sent.")
